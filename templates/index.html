@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+@@include('./partials/head.html')
+
+<body class="bg-dark-light">
+    @@include('./partials/header.html')
+    <main class="wrapper py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card mt-5 p-3">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">XCoin Payment Provider</h4>
+                            <p class="text-center">You are Transfering funds to oMDuckrnaHn8k9ew73FXPWoHK5fTFKx5MX</p>
+                            <div class="mt-5">
+                                <div class="form-group d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="mb-0">Bank Name</p>
+                                        <h5 class="value">My best bank</h5>
+                                    </div>
+                                    <a href="#" class="copy_link" data-copy="bank name" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"><img src="images/icon-copy.svg"></a>
+                                </div>
+                                <div class="form-group d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="mb-0">Account Number</p>
+                                        <h5 class="value">1234565678</h5>
+                                    </div>
+                                    <a href="#" class="copy_link" data-copy="bank name" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"><img src="images/icon-copy.svg"></a>
+                                </div>
+                                <div class="form-group d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="mb-0">Account Holder Name</p>
+                                        <h5 class="value">John Doe</h5>
+                                    </div>
+                                    <a href="#" class="copy_link" data-copy="bank name" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"><img src="images/icon-copy.svg"></a>
+                                </div>
+                                <div class="form-group d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="mb-0">Amount</p>
+                                        <h5 class="value">2.010,15</h5>
+                                    </div>
+                                    <a href="#" class="copy_link" data-copy="bank name" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"><img src="images/icon-copy.svg"></a>
+                                </div>
+                                <div class="form-group d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="mb-0">Bank Transfer Comment</p>
+                                        <h5 class="value">5648</h5>
+                                    </div>
+                                    <a href="#" class="copy_link" data-copy="bank name" data-toggle="tooltip" data-placement="top" title="Copy to Clipboard"><img src="images/icon-copy.svg"></a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 order-1">
+                                        <a href="#" class="mt-2 mt-md-5 d-block btn btn-secondary">Cancel Payment</a>
+                                    </div>
+                                    <div class="col-md-6 order-md-1">
+                                        <a href="#" class="mt-5 d-block btn btn-primary">Complete Payment</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card mt-5 p-3">
+                        <div class="card-body text-center">
+                            <p>If you want to track history of your payments please <a href="#">install XCoin application</a> and use it to scan QR code:</p>
+                            <img src="images/qr.png" alt="" class="qr">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script>
+    $(document).ready(function() {
+
+        $('.copy_link').tooltip({
+          delay: {
+            "show": 0,
+            "hide": 100
+        }
+        });
+
+        // Copy to clipboard
+        // Grab any text in the attribute 'data-copy' and pass it to the 
+        // copy function
+        $('.copy_link').click(function() {
+            var text = $(this).parent().find('.value').text();
+            var el = $(this);
+            copyToClipboard(text, el);
+
+        });
+
+    });
+    </script>
+</body>
+
+</html>

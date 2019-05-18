@@ -1,0 +1,16 @@
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+    @include box-shadow($btn-box-shadow-x $btn-box-shadow-y $btn-box-shadow-blur rgba($value, $btn-box-shadow-opacity));
+  	
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+    
+  }
+}
