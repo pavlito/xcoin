@@ -1,0 +1,7 @@
+node_modules/
+dist/
+build/
+app/libs/
+*.map
+*.css
+app/**/*.html

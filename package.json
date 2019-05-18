@@ -1,0 +1,33 @@
+{
+  "name": "xcoin",
+  "version": "1.0.0",
+  "description": "Project startup",
+  "main": "gulpfile.js",
+  "author": "Pavle Lucic",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "4.3.1",
+    "popper.js": "^1.15.0",
+  },
+  "dependencies": {
+    "beepbeep": "^1.2.2",
+    "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
+    "express": "^4.16.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "latest",
+    "gulp-file-include": "^2.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "gulp build"
+  }
+}
